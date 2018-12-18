@@ -1,0 +1,61 @@
+\documentclass{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage{multirow}
+\newlength\drop
+\makeatletter
+\newcommand*\titleM{\begingroup% Misericords, T&H p 153
+\setlength\drop{0.08\textheight}
+\centering
+\vspace*{\drop}
+{\Huge\bfseries The Title}\\[\baselineskip]
+{\scshape the subtitle}\\[\baselineskip]
+\vfill
+{\large\scshape the author}\par
+\vfill
+{\scshape \@date}\par
+\vspace*{2\drop}
+\endgroup}
+\makeatother
+
+\begin{document}
+% Title page
+\begin{titlingpage}
+\titleM
+\end{titlingpage}
+
+% TOC
+\tableofcontents
+\newpage
+
+% Personal Information
+\section{Personal Information}
+
+\begin{table}[ht]
+\begin{tabular}[t]{lllll}
+Full name & Niklas Karvonen  \\
+Date of birth & 1979-10-21 (8911) \\
+Phone number & 070-55 444 16 \\ 
+E-mail & niklas.karvonen@gmail.com \\
+Website & http://www.niklaskarvonen.com \\
+Postal Address & Karbinvägen 2A, 975 93 Luleå \\
+Current employment & Researcher at Eislab, Luleå University of Technology \\
+\multirow[t]{4}{*}{Previous employments}
+& 2013-2018 Doctoral Student @ Luleå University of Technolgoy \\
+& 2011-2013 Head Developer @ Taxijakt AB \\
+& 2010-2011 CEO @ Trezer AB \\
+& 2008-2010 CTO @ KYAB AB \\
+\end{tabular}
+\end{table}
+\newpage
+
+% Degrees
+\section{Degrees}
+\begin{table}[ht]
+\begin{tabular}[t]{lllll}
+\textbf{Degree} & \textbf{Issuer} & \textbf{Additional Information}\\
+PhD & Luleå University of Technology & Thesis title: "Activity Recognition in Resource-Constrained Environments"\\
+
+\end{tabular}
+\end{table}
+
+\end{document}
